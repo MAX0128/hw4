@@ -1,5 +1,5 @@
 ---
-author: "未命名 B01201001 一般系"
+author: "黃建智 B05102115 外文系"
 title: "HW 4: List, Loop, and Data frame"
 date: | 
   | 2021-03-18
@@ -42,7 +42,7 @@ df
 
 ```{r}
 # Write your code here
-
+df[(df$supp=="VC"), 1:2]
 # should print out:
 #> # A tibble: 30 x 2
 #>      len supp 
@@ -67,7 +67,7 @@ df
 
 ```{r}
 # Write your code here
-
+df[(df$supp=="VC")&(df$len<25), ]
 # should print out:
 #> # A tibble: 24 x 3
 #>      len supp   dose
@@ -92,7 +92,7 @@ df
 
 ```{r}
 # Write your code here
-
+df[(df$len+15*df$dose>40), ]
 # should print out:
 #> # A tibble: 24 x 3
 #>      len supp   dose
@@ -148,7 +148,12 @@ member <- list(
 
 n_years_later <- function(member_data, years) {
   # Write your code here
+  for (i in 1:length(member_data)){
+    member_data[[i]]$age <- member_data[[i]]$age + years
+  }
+  member_data
 }
+
 
 
 ##### Do Not modify the code below #####
@@ -171,6 +176,7 @@ for (y in -1:1) {
    
 ```{r}
 # Write your code here
+cute_cute <- as_tibble(week3Rclass)
 
 # Do not modify the code below
 cute_cute
