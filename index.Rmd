@@ -155,7 +155,6 @@ n_years_later <- function(member_data, years) {
 }
 
 
-
 ##### Do Not modify the code below #####
 member[[5]] <- list(name = "Obama", age = 59)
 for (y in -1:1) {
